@@ -1,0 +1,11 @@
+<ul class="list-group" *ngIf="gettodoArr.length > 0; else notodo">
+    <li class="list-group-item" *ngFor="let todo of gettodoArr; index as i">
+       {{i +1}}. {{todo}}
+    </li>
+</ul>
+
+<ng-template #notodo>
+    <p class="alert alert-info">
+        no item added yet !!!!!
+    </p>
+</ng-template>
